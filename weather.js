@@ -112,9 +112,10 @@ function getLocalWeather(location, woeid) {
 }
 
 function setBackground(description, isNight) {
+	
 	if (isNight && isResourceAvailable(description + '_night')) {
 		var url = "url('img/" + backgroundObject[description + "_night"];
-		url += ".png')";
+		url += "')";
 		$("#currentSection").css("background-image", url);
 	}
 	else {
@@ -124,7 +125,7 @@ function setBackground(description, isNight) {
 		}
 
 		var url = "url('img/" + backgroundObject[description];
-		url += ".png')";
+		url += "')";
 		$("#currentSection").css("background-image", url);
 	}
 }
